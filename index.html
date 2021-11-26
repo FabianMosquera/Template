@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Webssite</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -18,7 +18,38 @@
       </ul>
     </header>
     <section>
-        
+      <img src="img/Luna.png" id="luna" />
+      <img src="img/Montañas.png" id="montañas" />
+      <h2 id="text-header">Just For Fun!</h2>
+      <a href="#AboutMe" id="btn">Vistazo</a>
+      <img src="img/Puente.png" id="puente" />
     </section>
+    <div class="AboutMe" id="AboutMe">
+      <h2>My name is</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis porro
+        iste non tempore. Aut ducimus, fugit quas sed, quos at ut nobis illo
+        odit alias porro quaerat modi, molestiae dolorum.
+      </p>
+    </div>
+    <script>
+      let luna = document.getElementById('luna');
+      let montañas = document.getElementById('montañas');
+      let textheader = document.getElementById('text-header');
+      let btn = document.getElementById('btn');
+      let puente = document.getElementById('puente');
+      let header = document.querySelector('header')
+
+      window.addEventListener('scroll', function() {
+        let value = window.scrollY;
+        luna.style.top = value * 0.80 + 'px';
+        montañas.style.top = value * 0.5 + 'px';
+        puente.style.top = value * 0 + 'px';
+        textheader.style.marginRight = value * 3 + 'px';
+        textheader.style.marginTop = value * 1.2 + 'px';
+        btn.style.marginTop = value * 1.2 + 'px';
+        header.style.top = value * 0.5 + 'px';
+      })
+    </script>
   </body>
 </html>
