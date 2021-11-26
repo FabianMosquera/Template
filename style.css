@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 :root{
     /*COLORS*/
     --color-white: #fff;
@@ -12,6 +12,7 @@
     padding: 0%;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: "Rubik";
 }
 /*Body*/
 body {
